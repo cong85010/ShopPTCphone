@@ -1,0 +1,233 @@
+body {
+    background: rgb(223, 106, 77) !important;
+}
+/*Bar*/
+.navbar {
+    background: rgb(84,54,185);
+background: linear-gradient(22deg, rgb(209, 100, 56) 46%, rgba(121,9,109,1) 91%);
+}
+.navbar-brand img{width: 80px; height: 40px;}
+.navbar-collapse ul{
+    margin: auto;
+    
+}
+.navbar-collapse a{
+    color: white !important;
+    font-size: 17px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.container {
+    background: rgb(226, 92, 92);
+}
+/*Menu con*/
+.menu {
+    position: relative;
+}
+
+.menu .menu2 {
+    position: absolute;
+    z-index: 3;
+    background: rgb(219, 161, 161);
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    border-radius: 10px;
+    visibility: hidden;
+    transform: translateY(2em);
+    opacity: 0.6;
+    transition: 0.2s;
+}
+.menu:hover .menu2 {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+.menu2 .title {
+    font-weight: 800;
+    font-size: 14px;
+}
+.menu2 .left {
+    width: 60%;
+    border-right: 2px solid rgb(212, 208, 208);
+}
+.menu2 .right {
+    margin-left: 10%;
+}
+.menu2 .brand-sx {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu2 ul {
+    list-style: none;
+    justify-content: space-around;
+}
+.menu2 a {
+    color: black !important;
+    font-size: 13px;
+    margin-left: -10px;
+    padding: 5px;
+}
+.menu2 li {width: 125px;
+    margin-left: -27px
+}
+.menu2 a:hover {
+    text-decoration: none;
+    background-color: rgb(248, 109, 109);
+}
+/*Slide*/
+.mySlide {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0px 30px 0px;
+}
+.mySlide .carousel-inner {
+    box-shadow: 0px 0px 13px 1px white;
+}
+.mySlide li {
+    padding: 0px 2px 0px 20px;
+    background-color: red !important;
+}
+.swiper-container {
+    background: white;
+    border-radius: 10px;
+    font-size: 25px;
+    text-align: center;
+    height: 100px;
+}
+.swiper-wrapper {
+    display: flex;
+    width: 90%;
+}
+.swiper-wrapper img {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 120px;
+}
+.swiper-slide:hover img{
+    padding: 0;
+}
+.col-select h4{
+    padding-top: 20px;
+}
+  
+.check-list{
+    width: 300px;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.sapngang {
+    display: flex;
+    flex-flow: row wrap;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: red !important;
+    border-radius: 50%;
+    width: 30px !important;
+    height: 30px !important;
+    opacity: 0.6;
+}
+.check-list .item {
+    width: 140px;
+}
+.list-product{
+    background: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.apple .item {
+    width: 360px;
+    height: 300px;
+    text-align: center;
+    margin-left: 10px;
+}
+.item img {
+    width: 100%;
+}
+.list-tabs {
+    display: flex;
+
+}
+.list-tabs span {
+    line-height: 40px;
+    margin-left: 10px;
+}
+.nav-tabs{
+    margin: auto;
+
+}
+.sort-btn {
+    background: rgb(70, 70, 161) !important;
+}
+.list-product .list-pr {
+    display: flex;
+    flex-flow: row wrap;}
+/*Produts*/
+
+.products {
+    width: 230px;
+    padding: 20px;
+}
+.img-product {
+    width:230px;
+    position: relative;
+}
+.img-product img {
+    padding: 20px;
+    width: 100%;
+    transition: 0.4s;
+
+}
+.img-product:hover img {
+    padding: 10px;
+}
+.tragop, .lixi {
+    position: absolute;
+    padding: 0 10px;
+    background: red;
+    border-radius: 5px;
+    left: 20px;
+    bottom: 50px;
+}
+.lixi {
+    background: yellow;
+    bottom: 25px;
+}
+.memory .btn{
+    padding: 3px 7px;
+    color: black;
+    background: rgb(224, 217, 217);
+}
+.infor-product {
+    font-size: 17px;
+    margin-left: 20px;
+}
+.before-price {
+    font-size: 15px;
+    text-decoration: line-through;
+    display: block;
+    margin: 10px 0px -10px 7px;
+}
+.progress { 
+    margin-top: 15px;
+    border-radius: 20px !important;
+    background: rgb(243, 160, 160) !important;
+    width: 150px;
+    height: 25px !important;
+}
+.progress-bar{
+    width: 90%;
+    font-size: 17px;
+    background: red !important;
+    border-radius: 20px;
+}
+.infor-detail {
+    width: 100%;
+    background: rgb(221, 215, 215);
+    display: inline-block;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 10px;
+}
