@@ -8,11 +8,43 @@ body {
         font-size: 15px;
         height: 60px;
     }
+    .nut {
+        position: absolute;
+        right: 50%;
+        top: 17px;
+        font-size: 25px;
+    }
+    .menu{
+        text-align: right;
+    }
+    .menu2 {display: none !important;}
+    .menu:hover > a{
+        background-color: none !important;
+    } 
+    .search-bar{
+        display: none !important;
+    }
 }
 @media only screen and (min-width: 740px) and (max-width: 1024px){
     .swiper-container{
         font-size: 20px;
         height: 70px;
+    }
+    .nut {
+        position: absolute;
+        right: 50%;
+        top: 20px;
+        font-size: 25px;
+    }
+    .menu{
+        text-align: right;
+    }
+    .search-bar{
+        display: none !important;
+    }
+    .menu2{display: none !important;}
+    .menu:hover > a{
+        background-color: none !important;
     }
 }
 @media only screen and (min-width: 1024px){
@@ -20,30 +52,104 @@ body {
         font-size: 25px;
         height: 100px;
     }
+    .nut {
+        position: absolute;
+        right: 320px;
+        top: 20px;
+        font-size: 20px;
+    }
+    .menu:hover > a{
+        background-color: rgb(235, 87, 61) !important;
+    }
 }
 
 /*Bar*/
 .navbar {
+    position: relative;
     background: rgb(84,54,185);
-background: linear-gradient(22deg, rgb(209, 100, 56) 46%, rgba(121,9,109,1) 91%);
+    background: linear-gradient(22deg, rgb(209, 100, 56) 46%, rgba(121,9,109,1) 91%);
 }
 .navbar-brand img{width: 80px; height: 40px;}
 .navbar-collapse ul{
     margin: auto;
-    
 }
 .navbar-collapse a{
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
     font-size: 17px;
-    font-weight: 400;
-    margin-left: 20px;
-}
+    font-weight: 500;
+    padding: 10px 20px;
+} 
 .container {
     background: rgb(226, 92, 92);
+}
+.search {
+    position: relative;
+    transition: 0.5s;
+}
+.search .subsearch {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    visibility: hidden;
+}
+.search .tora {
+    width: 500%;
+    z-index: 10;
+}
+/*notificon*/
+.nut {
+    background: none;
+    border: none;
+    color: white;
+}
+.close-tb{
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: red;
+    font-size: 25px;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+.hi {
+    position: relative;
+    width: 400px;
+    padding: 25px;
+    background: rgb(245, 160, 160);
+    border-radius: 20px;
+    border: 2px solid red;
+    box-shadow: 0 0 10px 2px rgb(207, 13, 13);
+}
+.content-notification{
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity linear 0.2s;
+    font-size: 20px;
+
+}
+.content-notification:target {
+    visibility: visible;
+    opacity: 1;
 }
 /*Menu con*/
 .menu {
     position: relative;
+    padding: 0 10px;
 }
 
 .menu .menu2 {
@@ -85,16 +191,29 @@ background: linear-gradient(22deg, rgb(209, 100, 56) 46%, rgba(121,9,109,1) 91%)
 }
 .menu2 a {
     color: black !important;
-    font-size: 13px;
+    font-size: 15px;
     margin-left: -10px;
-    padding: 5px;
+    padding: 10px;
 }
-.menu2 li {width: 125px;
-    margin-left: -27px
+.menu2 li {
+    width: 125px;
+    margin-left:-37px;
+    text-align: center;
 }
-.menu2 a:hover {
-    text-decoration: none;
+.menu2 .gia li {
+    text-align: left !important;
+}
+.menu2 .brand-sx li{
+    margin-top: 10px;
+}
+.menu2 li:hover {
     background-color: rgb(248, 109, 109);
+}
+a:hover {
+    text-decoration: none !important;
+}
+.menu2 .full li{
+    width: 200px;
 }
 /*Slide*/
 .mySlide {
@@ -160,11 +279,11 @@ background: linear-gradient(22deg, rgb(209, 100, 56) 46%, rgba(121,9,109,1) 91%)
     border-radius: 10px;
     font-size: 15px;
 }
-.apple .item {
-    width: 360px;
-    height: 300px;
-    text-align: center;
-    margin-left: 10px;
+.uudai li:hover {
+    background: rgb(143, 138, 138);
+}
+.uudai .chon {
+    background: rgb(245, 122, 122) !important;
 }
 .item img {
     width: 100%;
