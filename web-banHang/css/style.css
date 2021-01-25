@@ -36,6 +36,7 @@ body {
         position: absolute;
         top: 10px;
         right: 8px;
+        font-size: 17px;
     } 
     .list-tabs span, .sort{display: none;}
     .list-tabs li, a{
@@ -87,13 +88,12 @@ body {
         text-decoration: line-through;
         display: block;
         margin: 7px 0px -10px 7px;
-        text-align: center;
     }
     .progress { 
         margin-top: 12px;
         border-radius: 20px !important;
         background: rgb(243, 160, 160) !important;
-        width: 100%;
+        width: 90%;
         height: 15px !important;
     }
     .progress-bar{
@@ -108,7 +108,30 @@ body {
     .contact iframe {
         height: 180px !important;
     }
-    
+    .swiper-container {
+        background: white;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .swiper-wrapper {
+        display: flex;
+        width: 100%;
+        padding: 7px;
+    }   
+    .swiper-slide img {
+        width: 100%;
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        background-color: red !important;
+        border-radius: 50%;
+        width: 10px !important;
+        height: 10px !important;
+        opacity: 0.6;
+    }
+    .mySlide li {
+        background-color: red !important;
+    }
 }
 @media only screen and (min-width: 740px) and (max-width: 1024px){
     .swiper-container{
@@ -218,7 +241,35 @@ body {
     .contact iframe {
         height: 200px !important;
     }
-    
+    .swiper-container {
+        background: white;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .swiper-wrapper {
+        display: flex;
+        width: 100%;
+    }
+    .swiper-slide img {
+        width: 100%;
+        padding: 10px;
+        transition: 0.5s;
+    }
+    .swiper-slide:hover img{
+        transform: scale(1.2);
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        background-color: red !important;
+        border-radius: 50%;
+        width: 30px !important;
+        height: 30px !important;
+        opacity: 0.6;
+    }
+    .mySlide li {
+        padding: 0px 2px 0px 20px;
+        background-color: red !important;
+    }
 }
 @media only screen and (min-width: 1024px){
     .swiper-container{
@@ -326,6 +377,35 @@ body {
         flex-flow: wrap;
         justify-content: space-between;
     }
+    .swiper-container {
+        background: white;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .swiper-wrapper {
+        display: flex;
+        width: 100%;
+    }
+    .swiper-slide img {
+        width: 100%;
+        padding: 10px;
+        transition: 0.5s;
+    }
+    .swiper-slide:hover img{
+        transform: scale(1.2);
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        background-color: red !important;
+        border-radius: 50%;
+        width: 30px !important;
+        height: 30px !important;
+        opacity: 0.6;
+    }
+    .mySlide li {
+        padding: 0px 2px 0px 20px;
+        background-color: red !important;
+    }
 }
 
 /*Bar*/
@@ -349,6 +429,7 @@ body {
 } 
 .container {
     background: rgb(226, 92, 92);
+    margin-top: 36px;
 }
 
 
@@ -484,27 +565,7 @@ a:hover {
 .mySlide .carousel-inner {
     box-shadow: 0px 0px 13px 1px white;
 }
-.mySlide li {
-    padding: 0px 2px 0px 20px;
-    background-color: red !important;
-}
-.swiper-container {
-    background: white;
-    border-radius: 10px;
-    text-align: center;
-}
-.swiper-wrapper {
-    display: flex;
-    width: 100%;
-}
-.swiper-slide img {
-    width: 100%;
-    padding: 10px;
-    transition: 0.5s;
-}
-.swiper-slide:hover img{
-    transform: scale(1.2);
-}
+
 .col-select h4{
     padding-top: 20px;
 }
@@ -518,14 +579,7 @@ a:hover {
     display: flex;
     flex-flow: row wrap;
 }
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    background-color: red !important;
-    border-radius: 50%;
-    width: 30px !important;
-    height: 30px !important;
-    opacity: 0.6;
-}
+
 .check-list .item {
     width: 140px;
 }
