@@ -1,5 +1,7 @@
 body {
     background: rgb(223, 106, 77) !important;
+    width: 100% !important;
+    overflow-x: hidden;
 }
 
 /*Responsive*/
@@ -10,42 +12,213 @@ body {
     }
     .nut {
         position: absolute;
-        right: 50%;
+        right: 35%;
         top: 17px;
         font-size: 25px;
     }
     .menu{
         text-align: right;
     }
+    .menu a {width: 100%;}
+
     .menu2 {display: none !important;}
     .menu:hover > a{
         background-color: none !important;
     } 
-    .search-bar{
-        display: none !important;
+    .search {
+        position: absolute;
+        width: 80% !important;
+        right: 10%;
+        top: 0;
     }
+    .search .nuttim {display: none;}
+    .search .timkiem  {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+    } 
+    .list-tabs span, .sort{display: none;}
+    .list-tabs li, a{
+        width: 70px;
+        float: left;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 2px !important;
+    }
+    .col-select {
+        display: none;
+    }
+    .products {
+        width: 150px;
+    }
+    .img-product {
+        width: 150px;
+    }
+    .tragop, .lixi {
+        position: absolute;
+        padding: 0 2px;
+        background: red;
+        border-radius: 5px;
+        left: 10px;
+        bottom: 20px;
+    }
+    .lixi {
+        bottom: 0px;
+    }
+    .memory .btn{
+        width: 40px;
+        font-size: 10px;
+        color: black;
+        background: rgb(224, 217, 217);
+        padding: 0px !important;
+    }
+    .infor-product {
+        width: 120%;
+        font-size: 12px; 
+    }
+    .optain {
+        width: 10px;
+    }
+    .price {
+        margin-left: 10px;
+    }
+    .before-price {
+        font-size: 12px;
+        text-decoration: line-through;
+        display: block;
+        margin: 7px 0px -10px 7px;
+        text-align: center;
+    }
+    .progress { 
+        margin-top: 12px;
+        border-radius: 20px !important;
+        background: rgb(243, 160, 160) !important;
+        width: 100%;
+        height: 15px !important;
+    }
+    .progress-bar{
+        width: 90%;
+        font-size: 13px;
+        background: red !important;
+        border-radius: 20px;
+    }
+    .infor-detail {
+        display: none;
+    }
+    .contact iframe {
+        height: 180px !important;
+    }
+    
 }
 @media only screen and (min-width: 740px) and (max-width: 1024px){
     .swiper-container{
         font-size: 20px;
-        height: 70px;
+        height: 80px;
     }
     .nut {
         position: absolute;
-        right: 50%;
+        right: 40%;
         top: 20px;
         font-size: 25px;
     }
     .menu{
         text-align: right;
     }
-    .search-bar{
-        display: none !important;
-    }
+    .menu a {width: 100%;}
     .menu2{display: none !important;}
     .menu:hover > a{
         background-color: none !important;
     }
+    .search {
+        position: absolute;
+        width: 80% !important;
+        right: 10%;
+        top: 0;
+    }
+    .search .nuttim {display: none;}
+    .search .timkiem  {
+        position: absolute;
+        font-size: 20px;
+        top: 10px;
+        right: 8px;
+    } 
+    .list-tabs span, .sort{display: none;}
+    .list-tabs li, a{
+        width: 80px;
+        float: left;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 2px !important;
+    }
+    .col-select {
+        display: none;
+    }
+    .products {
+        width: 220px;
+    }
+    .img-product {
+        width: 220px;
+    }
+    .tragop, .lixi {
+        position: absolute;
+        padding: 0 8px;
+        background: red;
+        border-radius: 5px;
+        left: 20px;
+        bottom: 50px;
+    }
+    .lixi {
+        bottom: 25px;
+    }
+    .infor-product {
+        width: 100%;
+        font-size: 17px;
+    }
+    .memory .btn{
+        width: 40px;
+        font-size: 15px;
+        color: black;
+        background: rgb(224, 217, 217);
+        padding: 5px 30px !important;
+    }
+    .memory .btn strong {
+        margin-left: -20px;
+    }
+    .before-price {
+        font-size: 15px;
+        text-decoration: line-through;
+        display: block;
+        text-align: center;
+        margin: 7px 0px -10px 7px;
+    }
+    .infor-detail {
+        margin-top: 10px;
+        width: 100%;
+        background: rgb(221, 215, 215);
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .progress { 
+        margin-top: 12px;
+        border-radius: 20px !important;
+        background: rgb(243, 160, 160) !important;
+        width: 100%;
+        height: 25px !important;
+    }
+    .progress-bar{
+        width: 90%;
+        font-size: 15px;
+        background: red !important;
+        border-radius: 20px;
+    }
+    .contact iframe {
+        height: 200px !important;
+    }
+    
 }
 @media only screen and (min-width: 1024px){
     .swiper-container{
@@ -54,18 +227,113 @@ body {
     }
     .nut {
         position: absolute;
-        right: 320px;
+        right: 16%;
         top: 20px;
         font-size: 20px;
     }
     .menu:hover > a{
         background-color: rgb(235, 87, 61) !important;
     }
+    .search {
+        position: absolute;
+        width: 150px !important;
+        right: 0;
+        top: 0;
+    }
+    .search .tim {
+        visibility: visible;
+        position: absolute;
+        transform: translate(-9px, -49px);
+        opacity: 0;
+        transition: 0.4s;
+    }
+    .search .timra {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-60px, -10px);
+        width: 200px;
+    }
+    
+    .search .nuttim {
+        position: absolute;
+        top: -50px;
+        right: -100px;
+        background: rgb(42, 216, 42);
+    }
+    .search .nuttim:hover {
+        background: blue !important;
+    }
+    .close-search {
+        position: absolute;
+        top: -10px;
+        right: 0;
+        font-size: 25px;
+    }
+    .search .timkiem  {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+    } 
+    .products {
+        width: 220px;
+    }
+    .img-product {
+        width: 220px;
+    }
+    .tragop, .lixi {
+        position: absolute;
+        padding: 0 10px;
+        background: red;
+        border-radius: 5px;
+        left: 20px;
+        bottom: 50px;
+    }
+    .lixi {
+        bottom: 25px;
+    }
+    .infor-product {
+        font-size: 17px;
+    }
+
+    .before-price {
+        font-size: 15px;
+        text-decoration: line-through;
+        display: block;
+        text-align: center;
+        margin: 7px 0px -10px 7px;
+    }
+    .progress { 
+        margin-top: 12px;
+        border-radius: 20px !important;
+        background: rgb(243, 160, 160) !important;
+        width: 100%;
+        height: 25px !important;
+    }
+    .progress-bar{
+        width: 90%;
+        font-size: 15px;
+        background: red !important;
+        border-radius: 20px;
+    }
+    .infor-detail {
+        margin-top: 10px;
+        width: 100%;
+        background: rgb(221, 215, 215);
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+    }
 }
 
 /*Bar*/
-.navbar {
+.header {
     position: relative;
+}
+.navbar {
+    position: absolute;
     background: rgb(84,54,185);
     background: linear-gradient(22deg, rgb(209, 100, 56) 46%, rgba(121,9,109,1) 91%);
 }
@@ -82,25 +350,13 @@ body {
 .container {
     background: rgb(226, 92, 92);
 }
-.search {
-    position: relative;
-    transition: 0.5s;
-}
-.search .subsearch {
-    position: absolute;
-    top: 50px;
-    right: 0px;
-    visibility: hidden;
-}
-.search .tora {
-    width: 500%;
-    z-index: 10;
-}
+
+
 /*notificon*/
 .nut {
     background: none;
     border: none;
-    color: white;
+    color: yellow;
 }
 .close-tb{
     position: absolute;
@@ -279,7 +535,7 @@ a:hover {
     border-radius: 10px;
     font-size: 15px;
 }
-.uudai li:hover {
+.uudai a:hover {
     background: rgb(143, 138, 138);
 }
 .uudai .chon {
@@ -290,7 +546,7 @@ a:hover {
 }
 .list-tabs {
     display: flex;
-
+    text-align: center;
 }
 .list-tabs span {
     line-height: 40px;
@@ -298,23 +554,29 @@ a:hover {
 }
 .nav-tabs{
     margin: auto;
-
 }
 .sort-btn {
     background: rgb(70, 70, 161) !important;
 }
 .list-product .list-pr {
     display: flex;
-    flex-flow: row wrap;}
+    flex-flow: row wrap;
+    justify-content: space-around !important;
+}
 /*Produts*/
 
 .products {
     position: relative;
-    width: 230px;
     padding: 10px;
 }
+.products > a {
+    width: 100%;
+    color: black;
+}
+.products:hover > a {
+    color: black;
+}
 .img-product {
-    width:230px;
     position: relative;
 }
 .img-product img {
@@ -325,88 +587,24 @@ a:hover {
 .products:hover img {
     transform: scale(0.95);
 }
-.tragop, .lixi {
-    position: absolute;
-    padding: 0 10px;
-    background: red;
-    border-radius: 5px;
-    left: 20px;
-    bottom: 50px;
-}
+
 .lixi {
     background: yellow;
-    bottom: 25px;
 }
-.memory .btn{
-    padding: 3px 7px;
-    color: black;
-    background: rgb(224, 217, 217);
-}
-.infor-product {
-    font-size: 17px;
-}
-.before-price {
-    font-size: 15px;
-    text-decoration: line-through;
-    display: block;
-    margin: 10px 0px -10px 7px;
-}
-.progress { 
-    margin-top: 15px;
-    border-radius: 20px !important;
-    background: rgb(243, 160, 160) !important;
-    width: 150px;
-    height: 25px !important;
-}
-.progress-bar{
-    width: 90%;
-    font-size: 17px;
-    background: red !important;
-    border-radius: 20px;
-}
-.infor-detail {
+.contact {
     width: 100%;
-    background: rgb(221, 215, 215);
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 30px;
+}
+.contact .reach{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 30%;
+}
+.contact a{
+    color: black;
+    font-size: 25px;
+}
+.reach h5 {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-.pro-buy {
-    position: absolute;
-    background: rgb(250, 236, 236);
-    width: 250px;
-    border-radius: 10px;
-    z-index: 1;
-    display: flex;
-    padding: 10px;
-    visibility: hidden;
-    bottom: -40px;
-    left: 0px;
-    justify-content: space-between;
-}
-.products:hover .pro-buy{
-    visibility: visible;
-}
-.buynow {
-    background: rgb(240, 46, 46) !important;
-    width: 60%;
-    font-weight: 700 !important;
-    color: white !important;
-}
-.buynow:hover {
-    background: rgb(201, 74, 74) !important;
-}
-.compare {
-    width: 40%;
-    background: rgb(185, 176, 176) !important;
-    font-weight: 700 !important;
-    font-size: 15px !important;
-    color: black !important;
-    margin-left: 10px;
-}
-.compare:hover {
-    background: rgb(121, 120, 120) !important;
 }

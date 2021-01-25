@@ -9,7 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,6 +19,7 @@
     <script src="/js/main.js"></script>
 </head>
   <body>
+    <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
                 <img src="/img/logo.png" alt="">
@@ -137,13 +139,6 @@
                         </div>
                     </li>
                 </ul>
-            <div class="search">
-                    <button he class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>      
-                    <div class="subsearch">
-                        <input type="search" name="" id="input_search" class="form-control search" value="" required="required" title="">
-                    </div>                    
-                </div>
-            </div>
         </nav>
     <div class="bell-notificon">
             <a href="#thongbao" class="nut">    
@@ -158,6 +153,21 @@
             </div>
         </div>
     </div>
+    <div class="input-group mb-3">
+        <div class="search"> 
+            <div id="input_bar" class="tim">
+                <input  type="text" class="form-control" placeholder="Tìm kiếm ..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <a href=""><i class="timkiem fa fa-search" aria-hidden="true"></i></a>
+            </div>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary nuttim" onclick="search_out()" type="button" id="button-addon">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+                
+            </div>
+        </div>
+    </div>
+</div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -194,7 +204,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12 col-lg-8">
                 <div class="swiper-container">
                     <b>Điện thoại</b>
                     <div class="swiper-wrapper">
@@ -259,650 +269,585 @@
                     </div>
                 <div class="list-pr"> 
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                     <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
+                        <a href="">
+                            <div class="img-product">
+                                <img src="/img/phone/ip12.png" alt="">
+                                <span class="tragop">Trả góp 0%</span>
+                                <span class="lixi">Lì xì 1.000.000đ
                                 </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
                             </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                            <div class="infor-product">
+                                <b class="ten">
+                                    iPhone 12 mini
+                                    <span class="badge badge-pill badge-primary">New</span>
+                                </b >
+                                <div class="memory">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input class="optain" type="radio" name="options" id="option1" autocomplete="off" checked> <strong>64GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> <strong>128GB</strong>
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option3" autocomplete="off"> <strong>256GB</strong>
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="price">
+                                    <span class="before-price">
+                                        21.290.000 VND
+                                    </span>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            18.990.000 VND
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="infor-detail">
+                                    <b>
+                                        <i class="fas fa-microchip"></i> A14 Bionic
+                                    </b>
+                                    <b> <i class="fas fa-hdd"></i> 64GB</b>
+                                    <b> <i class="fas fa-memory"></i> 3GB</b>
+                                    <b><i class="fas fa-mobile"></i></i> 6.1"</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pro-buy">
-                            <a href="" class="buynow btn btn-default">Mua ngay</a>
-                            <a href="" class="compare btn btn-default">So sánh</a>
-                        </div>
-                    </div>
-                    <div class="products">
-                        <div class="img-product">
-                            <img src="/img/phone/ip12.png" alt="">
-                            <span class="tragop">Trả góp 0%</span>
-                            <span class="lixi">Lì xì 1.000.000đ
-                            </span>
-                        </div>
-                        <div class="infor-product">
-                            <b class="ten">
-                                iPhone 12 mini
-                                <span class="badge badge-pill badge-primary">New</span>
-                            </b >
-                            <div class="memory">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> 64GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> 128GB
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" id="option3" autocomplete="off">256GB
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="price">
-                                <span class="before-price">
-                                    21.290.000 VND
-                                </span>
-                                <div class="progress">
-                                    <div class="progress-bar">
-                                        18.990.000 VND
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="infor-detail">
-                                <b>
-                                    <i class="fas fa-microchip"></i> A14 Bionic
-                                </b>
-                                <b> <i class="fas fa-hdd"></i> 64GB</b>
-                                <b> <i class="fas fa-memory"></i> 3GB</b>
-                                <b><i class="fas fa-mobile"></i></i> 6.1"</b>
-                            </div>
-                        </div>
-                        <div class="pro-buy">
-                            <div class="buynow">
-                                <a href="" class="btn btn-default">Mua ngay</a>
-                            </div>
-                            <div class="compare">
-                                <a href="" class="btn btn-default">So sánh</a>
-                            </div>
-                        </div>
-                    </div>
+                        </a>
+                        
+                    </div>                           
                 </div>  
             </div>
           </div>
-              <div class="col-md-4 col-select">
+              <div class="col-md-0 col-lg-4 col-select">
                 <h4 class="title">Hãng sản xuất</h4>
                 <div class="check-list sapngang">
                     <div class="custom-control custom-radio item">
@@ -1084,6 +1029,26 @@
             </div>
         </div>
     </div>
+</div>   
 
+    <address class="contact">
+        <div class="container-fluid full-">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501179.6221439265!2d106.10145064778557!3d11.078620429004042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310b6b94a55388b5%3A0x5fe0a6ef835c3c81!2zMzA3IFR1YSBIYWksIFBoxrDhu51uZyAxLCBDaMOidSBUaMOgbmgsIFTDonkgTmluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1611372528563!5m2!1sen!2s" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+                    <div class="reach">
+                        <h5>Liên hệ tư vấn: <strong>19002323</strong></h5>
+                        <h5>Liên hệ kỹ thuật: <strong>19002324</strong></h5>
+                        <h5>Liên hệ facebook: <a href="https://www.facebook.com/thanhcong85010/"><i class="fab fa-facebook"></i></a></h5>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </address>
   </body>
 </html>
